@@ -1,0 +1,35 @@
+<%= form_for @car do |f| %>
+
+<%= f.label :brand_name%>
+<input list="brand-names" id="brand-choice" name="brand_name" value=<%=@car.brand.name if @car.brand%> >
+
+<datalist id="brand-names">
+    <% Brand.all.each do |brand| %>
+        <option value="<%= brand.name %>">
+    <% end %>
+</datalist>
+
+  <br>
+
+  <%= f.label :model, "Model name"%>
+  <%= f.text_field :model %>
+
+  <br>
+
+  <%= f.label :owner_name%>
+  <input list="owner-names" id="owner-choice" name="owner_name" value=<%=@car.owner.name if @car.owner%> >
+
+  <datalist id="owner-names">
+      <% Owner.all.each do |owner| %>
+          <option value="<%= owner.name %>" >
+      <% end %>
+  </datalist>
+
+  <br>
+
+  <%= f.label :mechanic_id %>
+  <%= f.collection_select :mechanic_id, Mechanic.all, :id, :name %>
+    <br>
+
+  <%=  f.submit %>
+<% end %>

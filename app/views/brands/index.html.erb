@@ -1,0 +1,8 @@
+<h2>👌 All Brands 👌</h2>
+<ul>
+  <% @brands.each do |b| %>
+    <li>
+      <%=link_to b.name, b %> 🚙 <%= b.cars.length %>
+    </li>
+  <% end%>
+</ul>

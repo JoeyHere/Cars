@@ -1,0 +1,8 @@
+<h2><%= @mechanic.name %></h2>
+<ul>
+  <% @mechanic.cars.each do |car| %>
+    <li>
+      <%=link_to "#{car.owner.name}'s - #{car.brand.name} - #{car.model}", car %>
+    </li>
+  <% end%>
+</ul>

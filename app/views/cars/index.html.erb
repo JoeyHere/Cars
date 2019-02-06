@@ -1,0 +1,9 @@
+<h2>🚗 All Cars 🚙</h2>
+<ul>
+  <% @cars.each do |car| %>
+    <li>
+      <%=link_to "#{car.owner.name}'s - #{car.brand.name} - #{car.model}", car %>
+      <%= button_to "☠️", car_path(car), :method => :delete %>
+    </li>
+  <% end%>
+</ul>

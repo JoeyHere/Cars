@@ -1,0 +1,8 @@
+<h2>😁 Owners 😁</h2>
+<ul>
+  <% @owners.each do |o| %>
+    <li>
+      <%=link_to o.name, o %> 🚙 <%= o.cars.length %> 
+    </li>
+  <% end%>
+</ul>

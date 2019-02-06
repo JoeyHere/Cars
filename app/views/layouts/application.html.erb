@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cars</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    🚗
+    <%= link_to "Mechanics", mechanics_path %>
+    -
+    <%= link_to "Owners", owners_path %>
+    -
+    <%= link_to "Brands", brands_path %>
+    -
+    <%= link_to "Cars", cars_path %>
+    -
+    <%= link_to "NEW CAR", new_car_path %>
+    🚗
+    <%= yield %>
+  </body>
+</html>

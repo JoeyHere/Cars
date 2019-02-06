@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  model: MyString
+  mechanic: one
+  owner: one
+  brand: one
+
+two:
+  model: MyString
+  mechanic: two
+  owner: two
+  brand: two
